@@ -20,7 +20,6 @@ class Module11class3 extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-
                       Text(
                         "Homes",
                         style: Theme.of(context).textTheme.headlineLarge!
@@ -293,6 +292,8 @@ class Module11class3 extends StatelessWidget {
           ),
         ),
       ),
+
+
 
       bottomNavigationBar:  Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16.0,vertical: 20),
