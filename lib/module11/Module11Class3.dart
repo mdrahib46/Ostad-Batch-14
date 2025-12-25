@@ -294,8 +294,6 @@ class Module11class3 extends StatelessWidget {
         ),
       ),
 
-
-
       bottomNavigationBar:  Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16.0,vertical: 20),
         child: Row(
