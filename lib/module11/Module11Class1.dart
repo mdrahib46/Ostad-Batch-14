@@ -85,12 +85,12 @@ class _Module11class1State extends State<Module11class1> {
                       "Your given email : ${emailController.text.trim()} \nYour given password : ${passwordController.text}",
                     );
                   },
-                  child: Text('Submit'),
 
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.green,
                     foregroundColor: Colors.white,
                   ),
+                  child: Text('Submit'),
                 ),
               ),
               const SizedBox(height: 20),
