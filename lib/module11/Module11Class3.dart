@@ -186,6 +186,7 @@ class Module11class3 extends StatelessWidget {
                   const SizedBox(width: 16),
                   Expanded(
                     child: NeomorphicContainer(
+                      borderRadius: BorderRadius.only(bottomRight: Radius.circular(16)),
                       child: Padding(
                         padding: const EdgeInsets.all(16.0),
                         child: Column(
