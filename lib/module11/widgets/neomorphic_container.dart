@@ -20,22 +20,23 @@ class NeomorphicContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isDark = Theme.of(context).brightness == Brightness.dark;
     return Container(
       height: height ?? 170,
       width: height ?? 170,
       decoration: BoxDecoration(
-        color: Colors.blue.shade50,
+        color: isDark ? Color(0xFF1F1F1F) : Colors.blue.shade50,
         borderRadius: borderRadius ?? BorderRadius.circular(8),
         boxShadow:
         boxShadow ??
             [
               BoxShadow(
-                color: Colors.white.withOpacity(0.9),
+                color: isDark ? Color(0xFF141414) : Colors.white.withOpacity(0.9),
                 offset: const Offset(-6, -6),
                 blurRadius: 10,
               ),
               BoxShadow(
-                color: Colors.blue.withOpacity(0.2),
+                color:  isDark ? Color(0xFF2A2A2A) : Colors.blue.withOpacity(0.2),
                 offset: const Offset(4, 4),
                 blurRadius: 10,
               ),
