@@ -6,6 +6,8 @@ class Module11class3 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    bool isDarkMode = Theme.of(context).brightness == Brightness.dark;
     return Scaffold(
       body: SafeArea(
         child: Padding(
@@ -23,12 +25,12 @@ class Module11class3 extends StatelessWidget {
                       Text(
                         "Homes",
                         style: Theme.of(context).textTheme.headlineLarge!
-                            .copyWith(fontWeight: FontWeight.w600, color: Colors.black54),
+                            .copyWith(fontWeight: FontWeight.w600, color: isDarkMode ? Colors.white : Colors.black54),
                       ),
                       Text(
                         "Lorem Ipsum with text",
                         style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                          color: Colors.grey,
+                          color: isDarkMode ? Colors.white :Colors.grey,
                           fontSize: 16,
                         ),
                       ),
@@ -92,7 +94,7 @@ class Module11class3 extends StatelessWidget {
                           children: [
                             Icon(
                               Icons.tv_outlined,
-                              color: Colors.grey,
+                              color: isDarkMode ? Colors.white :Colors.grey,
                               size: 30,
                             ),
                             const Spacer(),
@@ -100,7 +102,7 @@ class Module11class3 extends StatelessWidget {
                               'Smart Tv',
                               style: Theme.of(context).textTheme.bodyLarge!
                                   .copyWith(
-                                    color: Colors.grey,
+                                    color: isDarkMode ? Colors.white : Colors.grey,
                                     fontWeight: FontWeight.w600,
                                   ),
                             ),
@@ -122,13 +124,13 @@ class Module11class3 extends StatelessWidget {
                           children: [
                             Row(
                               children: [
-                                Icon(Icons.wifi, color: Colors.grey, size: 30),
+                                Icon(Icons.wifi, color: isDarkMode ? Colors.white : Colors.grey, size: 30),
                                 const Spacer(),
                                 Container(
                                   height: 12,
                                   width: 12,
                                   decoration: BoxDecoration(
-                                    color: Colors.deepOrangeAccent,
+                                    color: isDarkMode ? Colors.deepOrangeAccent.shade100 : Colors.deepOrangeAccent,
                                     borderRadius: BorderRadius.circular(100),
                                   ),
                                 ),
@@ -139,7 +141,7 @@ class Module11class3 extends StatelessWidget {
                               'Wifi',
                               style: Theme.of(context).textTheme.bodyLarge!
                                   .copyWith(
-                                    color: Colors.grey,
+                                color: isDarkMode ? Colors.white : Colors.grey,
                                     fontWeight: FontWeight.w600,
                                   ),
                             ),
@@ -166,7 +168,7 @@ class Module11class3 extends StatelessWidget {
                           children: [
                             Icon(
                               Icons.thermostat,
-                              color: Colors.grey,
+                              color: isDarkMode ? Colors.white : Colors.grey,
                               size: 30,
                             ),
                             const Spacer(),
@@ -174,7 +176,7 @@ class Module11class3 extends StatelessWidget {
                               'Temperature',
                               style: Theme.of(context).textTheme.bodyLarge!
                                   .copyWith(
-                                    color: Colors.grey,
+                                color: isDarkMode ? Colors.white : Colors.grey,
                                     fontWeight: FontWeight.w600,
                                   ),
                             ),
@@ -194,7 +196,7 @@ class Module11class3 extends StatelessWidget {
                           children: [
                             Icon(
                               Icons.add_circle_outlined,
-                              color: Colors.grey,
+                              color: isDarkMode ? Colors.white : Colors.grey,
                               size: 30,
                             ),
                             const Spacer(),
@@ -202,7 +204,7 @@ class Module11class3 extends StatelessWidget {
                               'Add more',
                               style: Theme.of(context).textTheme.bodyLarge!
                                   .copyWith(
-                                    color: Colors.grey,
+                                color: isDarkMode ? Colors.white : Colors.grey,
                                     fontWeight: FontWeight.w600,
                                   ),
                             ),
@@ -225,7 +227,7 @@ class Module11class3 extends StatelessWidget {
                       Text(
                         "Temperature",
                         style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                          color: Colors.black54,
+                          color: isDarkMode ? Colors.white : Colors.black54,
                           fontWeight: FontWeight.w500,
                         ),
                       ),
@@ -233,7 +235,7 @@ class Module11class3 extends StatelessWidget {
                         "Lorem Ipsum is simply dummy",
                         style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                           fontWeight: FontWeight.w600,
-                          color: Colors.grey
+                            color: isDarkMode ? Colors.white : Colors.grey
                         ),
                       ),
                     ],
@@ -243,7 +245,7 @@ class Module11class3 extends StatelessWidget {
                     '20° C',
                     style: Theme.of(context).textTheme.headlineLarge!.copyWith(
                       fontSize: 36,
-                      color: Colors.grey,
+                      color: isDarkMode ? Colors.white : Colors.grey,
                       fontWeight: FontWeight.w400,
                     ),
                   ),
@@ -257,15 +259,15 @@ class Module11class3 extends StatelessWidget {
                 width: double.infinity,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(50),
-                  color: Colors.blue.shade50,
+                    color: isDarkMode ? Color(0xFF1F1F1F) : Colors.blue.shade50,
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.white.withOpacity(0.9),
+                      color: isDarkMode ? Color(0xFF2A2A2A) : Colors.white.withOpacity(0.9),
                       offset: const Offset(-6, -6),
                       blurRadius: 10,
                     ),
                     BoxShadow(
-                      color: Colors.blue.withOpacity(0.2),
+                      color: isDarkMode ? Color(0xFF141414) : Colors.blue.withOpacity(0.2),
                       offset: const Offset(4, 4),
                       blurRadius: 10,
                     ),
@@ -279,7 +281,7 @@ class Module11class3 extends StatelessWidget {
                       height: 50,
                       width: 200,
                       decoration: BoxDecoration(
-                        color: Colors.deepOrangeAccent,
+                          color: isDarkMode ? Colors.white38 : Colors.deepOrangeAccent,
                         borderRadius: BorderRadius.only(bottomLeft: Radius.circular(16), topLeft: Radius.circular(16))
                       ),
                     ),
